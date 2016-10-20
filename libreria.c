@@ -5,3 +5,16 @@
 #include <stdlib.h>
 #include <string.h>
 #include "libreria.h"
+
+
+	int head(int n){
+		
+	}
+
+	int tail(int n){
+		
+	}
+
+	int longlines(int n){
+		
+	}
