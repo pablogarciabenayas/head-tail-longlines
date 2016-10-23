@@ -12,13 +12,13 @@
 
 
 int head(int n){
-	
+	return 0;
 }
 
 int tail(int n){
-	
+	return 0;
 }
 
 int longlines(int n){
-	
+	return 0;
 }
