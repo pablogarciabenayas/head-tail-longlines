@@ -1,3 +1,5 @@
+#ifndef _LIBRERIA_H
+#define _LIBRERIA_H
 /*
  * Libreria práctica 1 de sistemas operativos
  * 
@@ -20,3 +22,5 @@ int tail(int n);
  * por la entrada estándar. 
  */
 int longlines(int n);
+
+#endif
