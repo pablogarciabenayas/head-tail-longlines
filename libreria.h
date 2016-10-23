@@ -17,8 +17,7 @@ int head(int n);
  */ 
 int tail(int n);
 
-/*
- * Muestra las n líneas más largas recibidas de mayor a menor longitud,
+/* Muestra las n líneas más largas recibidas de mayor a menor longitud,
  * o todas si hay menos de n líneas por la salida estándar recibidas
  * por la entrada estándar. 
  */
