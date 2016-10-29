@@ -28,6 +28,13 @@ int head(int n){
  * salida estándar recibidas por la entrada estándar.
  */ 
 int tail(int n){
+	int i;
+	char buffer[LINE_LENGTH];
+	
+	//Es necesario crear una estructura de datos para guardar todas las lienas
+	
+	
+	
 	return 0;
 }
 
@@ -36,5 +43,14 @@ int tail(int n){
  * por la entrada estándar. 
  */
 int longlines(int n){
+	int i;
+	char buffer[LINE_LENGTH];
+	
+	/*Es necesarios crear una estructura de datos para guardar las 
+	 * lineas ordenadas por orden de longitud
+	 * /
+	
+	
+	
 	return 0;
 }
