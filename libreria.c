@@ -10,16 +10,20 @@
 #include "libreria.h"
 #define LINE_LENGTH 1024
 
+
+
 /* Lectura de la entrada estándar, muestra las n primeras líneas en la 
  * salida estándar recibidas por la entrada estándar.
  */
 int head(int n){
+	//Variables
 	int i;
 	char buffer[LINE_LENGTH];
-	
-	for(i=0;i<n;i++){
-		fgets(buffer,LINE_LENGTH,stdin);
-		printf("%s",buffer);
+
+	i=1;
+	while(i<=n && (fgets(buffer,LINE_LENGTH,stdin)!=NULL)){
+		fputs(buffer,stdout);
+		i++;
 	}
 	return 0;
 }
@@ -28,13 +32,37 @@ int head(int n){
  * salida estándar recibidas por la entrada estándar.
  */ 
 int tail(int n){
+	//Variables
 	int i;
 	char buffer[LINE_LENGTH];
+	char **array;
 	
-	//Es necesario crear una estructura de datos para guardar todas las lienas
+	//Reserva de memoria para el array de char*
+	array = (char**)malloc(n*sizeof(char*));
 	
+	//Reserva de memoria en cada posición del array para almacenar un string de longitud LINE_LENGTH
+	for(i=0;i<n;i++){
+		array[i] = (char*) malloc(LINE_LENGTH*sizeof(char));
+	}
 	
+	//Lectura de lineas por la entrada estandar hasta que recibe NULL
+	while(fgets(buffer,LINE_LENGTH,stdin)!=NULL){
+		for(i=1;i<n;i++){
+			strcpy(array[i-1],array[i]);
+		}
+		strcpy(array[n-1],buffer);
+	}
 	
+	//Imprimir las n linas por salida estandar
+	for(i=0;i<n;i++){
+		fputs(array[i],stdout);
+	}
+	
+	//Liberar memoria creada para los string de cada posicion y el array
+	for(i=0;i<n;i++){
+		free(array[i]);
+	}
+	free(array);
 	return 0;
 }
 
@@ -43,14 +71,8 @@ int tail(int n){
  * por la entrada estándar. 
  */
 int longlines(int n){
-	int i;
-	char buffer[LINE_LENGTH];
-	
-	/*Es necesarios crear una estructura de datos para guardar las 
-	 * lineas ordenadas por orden de longitud
-	 * /
-	
-	
-	
+	//int i;
+	//char buffer[LINE_LENGTH];
 	return 0;
 }
+
