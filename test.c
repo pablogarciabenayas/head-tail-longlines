@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <errno.h>
 #include "libreria.h"
 
 /* Programa para probar el correcto funcionamiento de la 
@@ -28,14 +27,10 @@ int main(int argc, char *argv[]){
 			}else if(strcmp(argv[1],"longlines")==0){
 				longlines(lines);
 			}else{
-				//printf("Error, argumentos no validos.Uso:\n\t%s head Num_lineas\n\t%s tail Num_lineas\n\t%s longlines Num_lineas\nNum_lineas debe ser el numero de lineas que desea\n",argv[0],argv[0],argv[0]);
-				//return 1;
 				return error(argv[0]);
 			}
 		break;
 		default:
-			//printf("Error, argumentos no validos.Uso:\n\t%s head Num_lineas\n\t%s tail Num_lineas\n\t%s longlines Num_lineas\nNum_lineas debe ser el numero de lineas que desea\n",argv[0],argv[0],argv[0]);
-			//return 1;
 			return error(argv[0]);
 	} 
 	return 0;
